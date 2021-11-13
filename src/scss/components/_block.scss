@@ -1,0 +1,102 @@
+.iiif-wp {
+  margin-bottom: 2em;
+
+  &-viewer {
+    &-inner {
+      margin-bottom: 1em;
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      max-height: 90vh;
+    }
+
+    > a {
+      cursor: pointer;
+    }
+
+    .button:not(:hover):not(:active):not(.has-background), button:not(:hover):not(:active):not(.has-background), input[type="submit"]:not(:hover):not(:active):not(.has-background), input[type="reset"]:not(:hover):not(:active):not(.has-background), .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background), .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background), .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+      background-color: unset;
+      color: unset;
+    }
+  }
+
+  &-preview {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    .iiif-wp-preview-inner {
+      display: flex;
+      position: relative;
+      min-width: 61.8%;
+
+      img {
+        min-width: 100%;
+      }
+
+      a {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-shrink: 1;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(#000, 0);
+        transition: all 190ms ease-in-out;
+        color: transparent;
+        font-size: 1em;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        cursor: pointer;
+        border: 0em solid rgba(255, 255, 255, 0);
+        box-sizing: border-box;
+        box-shadow: none;
+        font-weight: 700;
+        line-height: 1.25em;
+
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        &:hover,
+        &:focus {
+          color: white;
+          text-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.75);
+          background-color: rgba(0, 0, 0, 0.75);
+          border: 0.5em solid rgba(255, 255, 255, 0.25);
+          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+
+  .iiif-wp--actions {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85em;
+    margin-top: 1em;
+  }
+
+  .iiif-wp-attribution {
+    font-size: 0.75em;
+    font-style: italic;
+    margin-top: 0.5em;
+  }
+}
