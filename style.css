@@ -1,0 +1,23 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+.wp-block-yith-iiif {
+  color: darkred;
+  background: #fcc;
+  border: 2px solid #c99;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.yith-iiif-align-left {
+  text-align: left;
+}
+
+.yith-iiif-align-center {
+  text-align: center;
+}
+
+.yith-iiif-align-right {
+  text-align: right;
+}

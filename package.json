@@ -1,0 +1,25 @@
+{
+  "name": "yith-iiif-wp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "author": "Mat Jordan",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "block",
+    "IIIF"
+  ],
+  "homepage": "https://github.com/mathewjordan/yith-iiif-wp",
+  "main": "build/index.js",
+  "devDependencies": {
+    "@wordpress/scripts": "^18.0.1"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "format:js": "wp-scripts format-js",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "start": "wp-scripts start"
+  }
+}
