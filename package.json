@@ -21,5 +21,8 @@
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
     "start": "wp-scripts start"
+  },
+  "dependencies": {
+    "@yith/yith": "^1.0.12"
   }
 }

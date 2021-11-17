@@ -2,43 +2,36 @@
  * WordPress dependencies
  */
 import {
-  RichText,
-  AlignmentToolbar,
   BlockControls,
   useBlockProps,
+  URLInput,
 } from "@wordpress/block-editor";
+import Yith from "@yith/yith";
 
 const Edit = (props) => {
+  console.log(props);
   const blockProps = useBlockProps();
   const {
-    attributes: { content, alignment },
-    className,
+    attributes: { id },
   } = props;
 
-  const onChangeContent = (newContent) => {
-    props.setAttributes({ content: newContent });
-  };
-
-  const onChangeAlignment = (newAlignment) => {
-    props.setAttributes({
-      alignment: newAlignment === undefined ? "none" : newAlignment,
-    });
+  const onChangeContent = (newId) => {
+    props.setAttributes({ id: newId });
   };
 
   return (
     <div {...blockProps}>
-      {
-        <BlockControls>
-          <AlignmentToolbar value={alignment} onChange={onChangeAlignment} />
-        </BlockControls>
-      }
-      <RichText
-        className={className}
-        style={{ textAlign: alignment }}
-        tagName="p"
+      {<BlockControls></BlockControls>}
+      <URLInput
+        disableSuggestions
+        isFullWidth
         onChange={onChangeContent}
-        value={content}
+        placeholder="IIIF Manifest ID"
+        value={id}
       />
+      <Yith type="presentation">
+        <Yith.Manifest id={id} />
+      </Yith>
     </div>
   );
 };

@@ -1,19 +1,11 @@
 /**
- * WordPress dependencies
+ * WordPress
  */
-import { RichText, useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps } from "@wordpress/block-editor";
 
 const Save = (props) => {
-  const blockProps = useBlockProps.save({
-    className: `yith-iiif-align-${props.attributes.alignment}`,
-  });
-  return (
-    <RichText.Content
-      {...blockProps}
-      tagName="p"
-      value={props.attributes.content}
-    />
-  );
+  const blockProps = useBlockProps.save();
+  return <div {...blockProps}>{props.attributes.id}</div>;
 };
 
 export default Save;

@@ -7,20 +7,15 @@
   "icon": "embed-photo",
   "category": "design",
   "attributes": {
-    "content": {
+    "id": {
       "type": "string",
       "source": "html",
-      "selector": "p"
-    },
-    "alignment": {
-      "type": "string",
-      "default": "none"
+      "selector": "input"
     }
   },
   "example": {
     "attributes": {
-      "content": "Hello world",
-      "alignment": "right"
+      "content": "Hello world"
     }
   },
   "editorScript": "file:./build/index.js",
