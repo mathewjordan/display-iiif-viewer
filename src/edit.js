@@ -9,7 +9,6 @@ import {
 import Yith from "@yith/yith";
 
 const Edit = (props) => {
-  console.log(props);
   const blockProps = useBlockProps();
   const {
     attributes: { id },
@@ -18,6 +17,8 @@ const Edit = (props) => {
   const onChangeContent = (newId) => {
     props.setAttributes({ id: newId });
   };
+
+  console.log(props);
 
   return (
     <div {...blockProps}>
@@ -29,9 +30,11 @@ const Edit = (props) => {
         placeholder="IIIF Manifest ID"
         value={id}
       />
-      <Yith type="presentation">
-        <Yith.Manifest id={id} />
-      </Yith>
+      {id && (
+        <Yith type="presentation">
+          <Yith.Manifest id={id} />
+        </Yith>
+      )}
     </div>
   );
 };

@@ -1,15 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/block.json",
   "apiVersion": 2,
-  "name": "yith-iiif/yith-iiif",
+  "name": "yith-iiif-wp/yith-iiif-wp",
   "title": "Yith IIIF",
-  "textdomain": "yith-iiif",
+  "textdomain": "yith-iiif-wp",
   "icon": "embed-photo",
   "category": "design",
   "attributes": {
     "id": {
       "type": "string",
-      "source": "html",
       "selector": "input"
     }
   },

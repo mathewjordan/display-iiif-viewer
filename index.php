@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'init', 'yith_iiif_load_textdomain' );
 
 function yith_iiif_load_textdomain() {
-	load_plugin_textdomain( 'yith-iiif', false, basename( __DIR__ ) . '/languages' );
+	load_plugin_textdomain( 'yith-iiif-wp', false, basename( __DIR__ ) . '/languages' );
 }
 
 /**
@@ -26,15 +26,23 @@ function yith_iiif_load_textdomain() {
  *
  * Passes translations to JavaScript.
  */
-add_action( 'init', 'yith_iiif_register_block' );
+add_action( 'init', 'yith_iiif_wp_register_block' );
 
-function yith_iiif_register_block() {
+function yith_iiif_wp_register_block() {
 
 	// Register the block by passing the location of block.json.
-	register_block_type( __DIR__ );
+	register_block_type_from_metadata( 
+    __DIR__, 
+    // array( 'render_callback' => 'yith_iiif_wp_render_callback' ) 
+  );
 
   if ( function_exists( 'wp_set_script_translations' ) ) {
-    wp_set_script_translations( 'yith-iiif', 'yith-iiif' );
+    wp_set_script_translations( 'yith-iiif-wp', 'yith-iiif-wp' );
   }
 
+}
+
+function yith_iiif_wp_render_callback( $attributes ) {
+  print_r ($attributes);
+	return '<div class="new-dynamic-block">something</div>';
 }
