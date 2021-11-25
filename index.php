@@ -4,7 +4,7 @@
 Plugin Name: Yith IIIF-WP
 Plugin URI: https://github.com/mathewjordan/yih-iiif-wp
 Description: Proof of concept for rendering of IIIF manifests in WordPress
-Version: 0.0.1
+Version: 0.0.2
 Author: mat@northwestern.edu
 Author URI: https://github.com/mathewjordan
 */
@@ -46,3 +46,8 @@ function yith_iiif_wp_render_callback( $attributes ) {
   print_r ($attributes);
 	return '<div class="new-dynamic-block">something</div>';
 }
+
+
+add_action('wp_enqueue_scripts', function () {
+  wp_enqueue_script('yith/yith-iiif-wp', plugin_dir_url( __FILE__ ) . 'build/yith.js', [], null, true);
+});

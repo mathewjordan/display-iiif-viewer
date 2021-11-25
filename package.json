@@ -1,6 +1,6 @@
 {
   "name": "yith-iiif-wp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "",
   "author": "Mat Jordan",
@@ -23,6 +23,6 @@
     "start": "wp-scripts start"
   },
   "dependencies": {
-    "@yith/yith": "^1.0.12"
+    "@yith/yith": "^1.0.22"
   }
 }

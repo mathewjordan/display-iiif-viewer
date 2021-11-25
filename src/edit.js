@@ -18,8 +18,6 @@ const Edit = (props) => {
     props.setAttributes({ id: newId });
   };
 
-  console.log(props);
-
   return (
     <div {...blockProps}>
       {<BlockControls></BlockControls>}
@@ -31,7 +29,7 @@ const Edit = (props) => {
         value={id}
       />
       {id && (
-        <Yith type="presentation">
+        <Yith type="projection">
           <Yith.Manifest id={id} />
         </Yith>
       )}
