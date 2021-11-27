@@ -8,7 +8,11 @@ const Save = (props) => {
   return (
     <>
       <div {...blockProps}>
-        <div class="yith-iiif" data-type="projection">
+        <div
+          class="yith-iiif"
+          data-preview={props.attributes.preview}
+          data-type={props.attributes.type}
+        >
           <div class="yith-iiif-manifest" data-id={props.attributes.id}></div>
         </div>
       </div>

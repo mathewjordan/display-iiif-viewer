@@ -10,6 +10,16 @@
     "id": {
       "type": "string",
       "selector": "input"
+    },
+    "preview": {
+      "type": "string",
+      "selector": "input",
+      "default": "figure"
+    },
+    "type": {
+      "type": "string",
+      "selector": "input",
+      "default": "presentation"
     }
   },
   "example": {

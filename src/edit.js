@@ -13,16 +13,28 @@ import * as Toolbar from "@radix-ui/react-toolbar";
 const Edit = (props) => {
   const blockProps = useBlockProps();
   const {
-    attributes: { id, alignment },
+    attributes: { alignment, id, preview, type },
   } = props;
 
-  const onChangeContent = (newId) => {
+  const onChangeId = (newId) => {
     props.setAttributes({ id: newId });
   };
 
   const onChangeAlignment = (newAlignment) => {
     props.setAttributes({
       alignment: newAlignment === undefined ? "none" : newAlignment,
+    });
+  };
+
+  const onChangePreview = (newPreview) => {
+    props.setAttributes({
+      preview: newPreview === undefined ? "none" : newPreview,
+    });
+  };
+
+  const onChangeType = (newType) => {
+    props.setAttributes({
+      type: newType === undefined ? "none" : newType,
     });
   };
 
@@ -37,25 +49,41 @@ const Edit = (props) => {
         </BlockControls>
       }
       <Toolbar.Root>
-        <Toolbar.ToggleGroup type="single">
-          <Toolbar.ToggleItem>Figure</Toolbar.ToggleItem>
-          <Toolbar.ToggleItem>Interstitial</Toolbar.ToggleItem>
+        <Toolbar.ToggleGroup
+          defaultValue="figure"
+          onValueChange={onChangePreview}
+          type="single"
+          value={preview}
+        >
+          <Toolbar.ToggleItem value="figure">Figure</Toolbar.ToggleItem>
+          <Toolbar.ToggleItem value="interstitial">
+            Interstitial
+          </Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
-        <Toolbar.ToggleGroup type="single">
-          <Toolbar.ToggleItem>Presentation</Toolbar.ToggleItem>
-          <Toolbar.ToggleItem>Projection</Toolbar.ToggleItem>
+        <Toolbar.ToggleGroup
+          defaultValue="presentation"
+          onValueChange={onChangeType}
+          type="single"
+          value={type}
+        >
+          <Toolbar.ToggleItem value="presentation">
+            Presentation
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem value="projection">Projection</Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
+        <Toolbar.Separator />
+        <Toolbar.Link>Docs</Toolbar.Link>
       </Toolbar.Root>
 
       <URLInput
         disableSuggestions
         isFullWidth
-        onChange={onChangeContent}
+        onChange={onChangeId}
         placeholder="IIIF Manifest ID"
         value={id}
       />
       {id && (
-        <Yith type="projection">
+        <Yith preview={preview} type={type}>
           <Yith.Manifest id={id} />
         </Yith>
       )}
