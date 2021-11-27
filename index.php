@@ -49,5 +49,5 @@ function yith_iiif_wp_render_callback( $attributes ) {
 
 
 add_action('wp_enqueue_scripts', function () {
-  wp_enqueue_script('yith/yith-iiif-wp', plugin_dir_url( __FILE__ ) . 'build/yith.js', [], null, true);
+  wp_enqueue_script('yith/iiif-wp', 'https://unpkg.com/@yith/yith@1.0.28/dist/yith.js', [], null, true);
 });
