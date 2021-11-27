@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "@radix-ui/react-toolbar": "^0.1.1",
-    "@yith/yith": "^1.0.22"
+    "@yith/yith": "^1.0.25"
   }
 }
