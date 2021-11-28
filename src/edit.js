@@ -112,33 +112,36 @@ const Edit = (props) => {
           />
         </BlockControls>
       }
-      <Wrapper>
-        <Controls>
-          <ControlGroup
-            defaultValue="figure"
-            onValueChange={onChangePreview}
-            type="single"
-            value={preview}
-          >
-            <ControlItem value="figure">Figure</ControlItem>
-            <ControlItem value="interstitial">Interstitial</ControlItem>
-          </ControlGroup>
-          <Separator />
-          <ControlGroup
-            defaultValue="presentation"
-            onValueChange={onChangeType}
-            type="single"
-            value={type}
-          >
-            <ControlItem value="presentation">Presentation</ControlItem>
-            <ControlItem value="projection">Projection</ControlItem>
-          </ControlGroup>
-        </Controls>
-        <Link href="https://yith.dev" target="_blank">
-          Docs
-        </Link>
-      </Wrapper>
-
+      {isSelected && (
+        <>
+          <Wrapper>
+            <Controls>
+              <ControlGroup
+                defaultValue="figure"
+                onValueChange={onChangePreview}
+                type="single"
+                value={preview}
+              >
+                <ControlItem value="figure">Figure</ControlItem>
+                <ControlItem value="interstitial">Interstitial</ControlItem>
+              </ControlGroup>
+              <Separator />
+              <ControlGroup
+                defaultValue="presentation"
+                onValueChange={onChangeType}
+                type="single"
+                value={type}
+              >
+                <ControlItem value="presentation">Presentation</ControlItem>
+                <ControlItem value="projection">Projection</ControlItem>
+              </ControlGroup>
+            </Controls>
+            <Link href="https://yith.dev" target="_blank">
+              Docs
+            </Link>
+          </Wrapper>
+        </>
+      )}
       <URLInput
         disableSuggestions
         isFullWidth
