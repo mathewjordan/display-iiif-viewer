@@ -44,10 +44,12 @@ const Edit = (props) => {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    backgroundColor: "#fff6",
+    backgroundColor: "#fffa",
+    boxShadow: "2px 2px 5px #0001",
     padding: "0.25rem 0",
     borderRadius: "0.5rem",
     marginBottom: "1rem",
+    border: "2px solid #fff2",
   });
 
   const Controls = styled("div", {
@@ -66,9 +68,11 @@ const Edit = (props) => {
     fontSize: "1rem",
     padding: "0.5rem",
     margin: "0",
+    color: "#000a",
 
     "&[data-state='on']": {
       fontWeight: "700",
+      color: "#000",
     },
   });
 
@@ -76,16 +80,26 @@ const Edit = (props) => {
     display: "flex",
     width: "1px",
     height: "70%",
-    backgroundColor: "#0003",
+    backgroundColor: "#0001",
     alignSelf: "center",
   });
 
   const Link = styled(Toolbar.Link, {
     display: "flex",
     border: "none",
-    backgroundColor: "transparent",
+    backgroundColor: "#653787",
+    color: "#fff !important",
     fontFamily: "inherit",
     fontSize: "1rem",
+    alignSelf: "center",
+    padding: "0.25rem 0.75rem",
+    margin: "0 0.5rem",
+    borderRadius: "0.25rem",
+    fontSize: "0.75rem",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    textDecoration: "none",
+    boxShadow: "1px 1px 3px #0003",
   });
 
   return (
@@ -120,7 +134,9 @@ const Edit = (props) => {
             <ControlItem value="projection">Projection</ControlItem>
           </ControlGroup>
         </Controls>
-        {/* <Link>Docs</Link> */}
+        <Link href="https://yith.dev" target="_blank">
+          Docs
+        </Link>
       </Wrapper>
 
       <URLInput
