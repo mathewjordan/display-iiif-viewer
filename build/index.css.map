@@ -1,1 +1,13 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;EACE,WAAW;EACX,mBAAmB;EACnB,yBAAyB;EACzB,aAAa;EACb,uBAAuB;AACzB","sources":["webpack://yith-iiif-wp/./editor.css"],"sourcesContent":[".wp-block-yith-iif {\n  color: #fff;\n  background: #00a8db;\n  border: 2px solid #0d72b2;\n  padding: 20px;\n  font-family: sans-serif;\n}\n"],"names":[],"sourceRoot":""}
+{
+  "version": 3,
+  "file": "index.css",
+  "mappings": ";;;AAAA;EACE,WAAW;EACX,mBAAmB;EACnB,yBAAyB;EACzB,aAAa;EACb,uBAAuB;AACzB",
+  "sources": [
+    "webpack://display-iiif-viewer/./editor.css"
+  ],
+  "sourcesContent": [
+    ".wp-block-yith-iif {\n  color: #fff;\n  background: #00a8db;\n  border: 2px solid #0d72b2;\n  padding: 20px;\n  font-family: sans-serif;\n}\n"
+  ],
+  "names": [],
+  "sourceRoot": ""
+}

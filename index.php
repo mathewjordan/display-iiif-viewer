@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'init', 'yith_iiif_load_textdomain' );
 
 function yith_iiif_load_textdomain() {
-	load_plugin_textdomain( 'yith-iiif-wp', false, basename( __DIR__ ) . '/languages' );
+	load_plugin_textdomain( 'display-iiif-viewer', false, basename( __DIR__ ) . '/languages' );
 }
 
 /**
@@ -37,7 +37,7 @@ function yith_iiif_wp_register_block() {
   );
 
   if ( function_exists( 'wp_set_script_translations' ) ) {
-    wp_set_script_translations( 'yith-iiif-wp', 'yith-iiif-wp' );
+    wp_set_script_translations( 'display-iiif-viewer', 'display-iiif-viewer' );
   }
 
 }

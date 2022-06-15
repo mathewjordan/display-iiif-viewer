@@ -1,1 +1,13 @@
-{"version":3,"file":"style-index.css","mappings":";;;AAAA;;;EAGE;AACF;EACE,cAAc;EACd,gBAAgB;EAChB,sBAAsB;EACtB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;AACnB","sources":["webpack://yith-iiif-wp/./style.css"],"sourcesContent":["/**\n * Note that these styles are loaded *before* editor styles, so that\n * editor-specific styles using the same selectors will take precedence.\n */\n.wp-block-yith-iiif {\n  color: darkred;\n  background: #fcc;\n  border: 2px solid #c99;\n  padding: 20px;\n  font-family: sans-serif;\n}\n\n.yith-iiif-align-left {\n  text-align: left;\n}\n\n.yith-iiif-align-center {\n  text-align: center;\n}\n\n.yith-iiif-align-right {\n  text-align: right;\n}\n"],"names":[],"sourceRoot":""}
+{
+  "version": 3,
+  "file": "style-index.css",
+  "mappings": ";;;AAAA;;;EAGE;AACF;EACE,cAAc;EACd,gBAAgB;EAChB,sBAAsB;EACtB,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;AACnB",
+  "sources": [
+    "webpack://display-iiif-viewer/./style.css"
+  ],
+  "sourcesContent": [
+    "/**\n * Note that these styles are loaded *before* editor styles, so that\n * editor-specific styles using the same selectors will take precedence.\n */\n.wp-block-yith-iiif {\n  color: darkred;\n  background: #fcc;\n  border: 2px solid #c99;\n  padding: 20px;\n  font-family: sans-serif;\n}\n\n.yith-iiif-align-left {\n  text-align: left;\n}\n\n.yith-iiif-align-center {\n  text-align: center;\n}\n\n.yith-iiif-align-right {\n  text-align: right;\n}\n"
+  ],
+  "names": [],
+  "sourceRoot": ""
+}

@@ -1,5 +1,5 @@
 {
-  "name": "yith-iiif-wp",
+  "name": "display-iiif-viewer",
   "version": "0.0.2",
   "private": true,
   "description": "",
@@ -10,7 +10,7 @@
     "block",
     "IIIF"
   ],
-  "homepage": "https://github.com/mathewjordan/yith-iiif-wp",
+  "homepage": "https://github.com/mathewjordan/display-iiif-viewer",
   "main": "build/index.js",
   "devDependencies": {
     "@wordpress/scripts": "^18.0.1"

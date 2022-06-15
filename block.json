@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/block.json",
   "apiVersion": 2,
-  "name": "yith-iiif-wp/yith-iiif-wp",
+  "name": "display-iiif-viewer/display-iiif-viewer",
   "title": "Yith IIIF",
-  "textdomain": "yith-iiif-wp",
+  "textdomain": "display-iiif-viewer",
   "icon": "embed-photo",
   "category": "design",
   "attributes": {
