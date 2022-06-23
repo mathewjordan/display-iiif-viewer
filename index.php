@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Yith IIIF-WP
+Plugin Name: Display IIIF Viewer
 Plugin URI: https://github.com/mathewjordan/yih-iiif-wp
 Description: Proof of concept for rendering of IIIF manifests in WordPress
 Version: 0.0.2

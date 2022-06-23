@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/block.json",
   "apiVersion": 2,
   "name": "display-iiif-viewer/display-iiif-viewer",
-  "title": "Yith IIIF",
+  "title": "Display IIIF Viewer",
   "textdomain": "display-iiif-viewer",
   "icon": "embed-photo",
   "category": "design",
