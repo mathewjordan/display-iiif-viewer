@@ -13,7 +13,7 @@
   "homepage": "https://github.com/mathewjordan/display-iiif-viewer",
   "main": "build/index.js",
   "devDependencies": {
-    "@wordpress/scripts": "^18.0.1"
+    "@wordpress/scripts": "^18.1.0"
   },
   "scripts": {
     "build": "wp-scripts build",
